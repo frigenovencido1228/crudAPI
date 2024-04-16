@@ -1,15 +1,16 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const Product = require('./models/product.model.js')
 const productRoute = require('./routes/product.route.js');
+
+const port = 3000||process.env.port;
 
 app.use(express.json());
 
 // routes
 app.use("/api/products",productRoute)
 //
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
 })
 
