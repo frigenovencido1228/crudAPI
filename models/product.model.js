@@ -20,8 +20,10 @@ const ProductSchema = mongoose.Schema({
     required: false
   }
 }, {
-  timestamps: true
-});
+  timestamps: true,
+  toJson: { getters: true}
+}
+);
 
 const Product = mongoose.model("Product",ProductSchema);
 
